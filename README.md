@@ -1,12 +1,12 @@
-# 🎮 10 Seconds Ahead
+# 10 Seconds Ahead
 
-### 🧩 Turn-Based Path Planning Puzzle Game
+## Turn-Based Path Planning Puzzle Game
 
-**10 Seconds Ahead** is a strategy-based puzzle game where you plan your moves 10 seconds ahead — then your actions execute automatically. Think fast, plan smart, and collect all treasure chests while navigating obstacles and using temporary blocks to alter the map.
+**10 Seconds Ahead** is a strategy puzzle game where players plan their movement sequence during a 10-second planning phase. Once the timer ends, all moves automatically execute. Players must collect all treasure chests while navigating obstacles and using temporary blocks to alter the environment.
 
 ---
 
-## 🧑‍💻 Developer Info
+## Developer Info
 **Developer:** Devashish Mishra  
 **Role:** Lead Programmer & Game Designer  
 **Language:** C++  
@@ -14,36 +14,37 @@
 
 ---
 
-## ⚙️ Tech Stack
-- **Language:** C++  
-- **Framework:** SFML (Graphics, Window, System modules)  
-- **IDE:** Visual Studio Code  
-- **Compiler:** MinGW (g++)  
-- **Assets:** Custom pixel art (Grass, Tree, Water, Chest, Block)
+## Tech Stack
+- C++  
+- SFML (Graphics, Window, System modules)  
+- Visual Studio Code  
+- MinGW (g++)  
+- Custom pixel-art assets (Grass, Tree, Water, Chest, Block)
 
 ---
 
-## 🎯 Gameplay Overview
+## Gameplay Overview
 
-### ⏳ Planning Phase (10 seconds)
+### Planning Phase (10 seconds)
 - Use **W, A, S, D** to queue movement commands.
-- A **yellow ghost trail** shows your future path.
-- Press **K** to undo last move or undo last placed block.
+- A yellow ghost trail shows the predicted movement path.
+- Press **K** to undo the last planned move or remove the last placed block.
 - Press **B** to place a **temporary block** (limited count).
-- Blocks vanish automatically at the start of the next turn.
-- Ghost preview updates live to visualize your route.
+- Blocks disappear automatically at the start of the next turn.
+- The ghost preview updates after every input.
 
-### 🚀 Execution Phase
-- Planned moves automatically execute.
-- Chests are collected instantly when stepped on.
-- Trees 🌳 and Water 🌊 tiles are unwalkable.
-- Player-placed blocks temporarily alter the map.
-- After execution finishes, you enter planning mode again.
+### Execution Phase
+- All planned moves are executed automatically.
+- Chests are collected instantly upon stepping onto them.
+- Trees and water tiles are unwalkable.
+- Blocks temporarily modify the map layout.
+- After all moves finish, the next planning phase begins.
 
 ---
 
-## 🗺️ Map System
-The grid is **20×20**, supporting:
+## Map System
+
+The game uses a 20×20 grid. Supported map symbols:
 
 | Symbol | Meaning |
 |--------|---------|
@@ -54,50 +55,49 @@ The grid is **20×20**, supporting:
 | `P` | Player start |
 | `.` | Grass tile |
 
-Future hazard support (coming soon):
-- `C>` / `C<` → Cannons (horizontal shooters)
-- `Lv` / `L^` → Vertical lasers
+Upcoming hazard features (in development):
+- `C>` / `C<` – Horizontal cannons
+- `Lv` / `L^` – Vertical laser emitters
 
 ---
 
-## 🧱 Current Features
+## Current Features
 - Smooth grid rendering  
-- 10-second planning phase with live countdown  
-- Undo system for moves **and** blocks  
-- Dynamic block placement + clear on turn reset  
-- Chest collection system  
-- Real-time ghost path preview (yellow/red for blocked)  
-- Proper aspect-ratio letterboxing  
-- HUD for timer, blocks left, controls tooltip  
+- 10-second planning and automatic execution cycles  
+- Undo system for both moves and blocks  
+- Temporary block placement system  
+- Chest collection and tracking  
+- Ghost path preview (yellow for safe, red for blocked)  
+- Letterboxed rendering for proper aspect ratio  
+- HUD showing timer, blocks remaining, and control tips  
 
 ---
 
-## 🚧 Upcoming Features
-- Full cannon & laser hazard mechanics  
-- Laser beam cast + player hit detection  
-- “Level Complete” screen after all chests collected  
-- Start Menu + Settings  
-- Level selection  
-- 2-level campaign  
+## Upcoming Features
+- Complete cannon and laser hazard system  
+- Laser beam collision detection (insta-fail or restart)  
+- Level-complete screen after all items are collected  
+- Start menu and settings menu  
+- Multiple levels (target: 2-level mini campaign)
 
 ---
 
-## 🧠 How to Build & Run
+## How to Build & Run
 
 ### Requirements
 - SFML 2.6+
-- Configure include and lib paths:
-- I C:/SFML/include
-- L C:/SFML/lib
-
+- Include and library paths configured in compiler:
+  - `-I C:/SFML/include`
+  - `-L C:/SFML/lib`
 
 ### Build Command
+
 ```bash
 g++ -g src/main.cpp src/Game.cpp src/Grid.cpp src/Player.cpp -o 10SecondsAhead.exe ^
 -I C:/SFML/include -L C:/SFML/lib -lsfml-graphics -lsfml-window -lsfml-system -mwindows
 ```
 
-## 🖼️ Assets
+## Assets
 
 | File        | Description         |
 |-------------|----------------------|
@@ -109,7 +109,7 @@ g++ -g src/main.cpp src/Game.cpp src/Grid.cpp src/Player.cpp -o 10SecondsAhead.e
 
 ---
 
-## 📅 Current Progress
+## Current Progress
 
 | Feature                     | Status |
 |-----------------------------|:------:|
