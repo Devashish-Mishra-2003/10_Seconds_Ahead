@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build with SFML",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "src/main.cpp",
+        "src/Game.cpp",
+        "src/Player.cpp",
+        "src/Grid.cpp",
+        "-o",
+        "10SecondsAhead.exe",
+        "-I",
+        "C:/MinGW/include",
+        "-I",
+        "C:/SFML/include",
+        "-L",
+        "C:/SFML/lib",
+        "-lsfml-graphics",
+        "-lsfml-window",
+        "-lsfml-system",
+        "-mwindows"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
