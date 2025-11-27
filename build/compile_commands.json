@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/devas/Desktop/10_Seconds_Ahead/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\YourGameProject.dir\\src\\main.cpp.obj -c C:\\Users\\devas\\Desktop\\10_Seconds_Ahead\\src\\main.cpp",
+  "file": "C:/Users/devas/Desktop/10_Seconds_Ahead/src/main.cpp",
+  "output": "CMakeFiles/YourGameProject.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/devas/Desktop/10_Seconds_Ahead/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\YourGameProject.dir\\src\\Game.cpp.obj -c C:\\Users\\devas\\Desktop\\10_Seconds_Ahead\\src\\Game.cpp",
+  "file": "C:/Users/devas/Desktop/10_Seconds_Ahead/src/Game.cpp",
+  "output": "CMakeFiles/YourGameProject.dir/src/Game.cpp.obj"
+}
+]

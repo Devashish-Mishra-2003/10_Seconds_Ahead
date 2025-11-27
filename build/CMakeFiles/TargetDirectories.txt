@@ -1,0 +1,3 @@
+C:/Users/devas/Desktop/10_Seconds_Ahead/build/CMakeFiles/YourGameProject.dir
+C:/Users/devas/Desktop/10_Seconds_Ahead/build/CMakeFiles/edit_cache.dir
+C:/Users/devas/Desktop/10_Seconds_Ahead/build/CMakeFiles/rebuild_cache.dir
