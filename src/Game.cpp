@@ -78,7 +78,7 @@ static const std::vector<std::string> L3 = {
 };
 
 static const std::vector<std::string> L4 = {
-"....................",
+".................Lv.",
 "...C>.......C<......",
 "...TTT......TTT.....",
 "...T~T......T~T..I..",
@@ -101,9 +101,9 @@ static const std::vector<std::string> L4 = {
 };
 
 static const std::vector<std::string> L5 = {
-"..C>..........C<....",
 "....................",
-"......I.......I....",
+"....................",
+"C>....I.......I...C<",
 "....................",
 "....TTT.............",
 "....T~T.............",
@@ -111,16 +111,16 @@ static const std::vector<std::string> L5 = {
 "....TTT.............",
 "....................",
 "....................",
-"..Lv.......Lv.......",
+"..LvC>.....Lv.T.....",
 "....................",
 "....I.........I.....",
 "....................",
 "....................",
 "....................",
 ".........I..........",
-"....................",
-"P...................",
-"...................."
+".................TTT",
+"P................T~T",
+".................TTT"
 };
 
 static const std::vector<std::string> L6 = {
@@ -128,22 +128,22 @@ static const std::vector<std::string> L6 = {
 "....................",
 "...I.........I......",
 "....................",
-"..Lv.....I....Lv....",
+"C>.......I....Lv....",
 "....................",
 "....................",
-".....TTT............",
+".....TTT.........TT.",
 ".....T~T.....I......",
 ".....T~T............",
 ".....TTT............",
 "....................",
-"...............C<...",
+"..................C<",
 "....................",
 "....................",
-"....................",
-"....I...............",
-"....................",
+"............TTTTT...",
+"....I.......T~~~T...",
+"............TTTTT...",
 "P...................",
-"...................."
+"...............TT..."
 };
 
 // ---------------- Helpers ----------------
@@ -211,26 +211,32 @@ Game::Game()
     // SFML3 Text constructor: Text(const Font& font, String string="", unsigned int characterSize=30)
     timerText = std::make_unique<sf::Text>(font, "10.0", 24u);
     timerText->setFillColor(sf::Color::White);
+    timerText->setStyle(sf::Text::Style::Bold);
     timerText->setPosition({10.f, 10.f});
 
     blocksLeftText = std::make_unique<sf::Text>(font, "Blocks Left: 3", 20u);
     blocksLeftText->setFillColor(sf::Color::White);
+    blocksLeftText->setStyle(sf::Text::Style::Bold);
     blocksLeftText->setPosition({10.f, 40.f});
 
     turnsText = std::make_unique<sf::Text>(font, "Turns: ∞", 20u);
     turnsText->setFillColor(sf::Color::White);
+    turnsText->setStyle(sf::Text::Style::Bold);
     turnsText->setPosition({(float)WindowWidth - 220.f, 10.f});
 
     tooltipText = std::make_unique<sf::Text>(font, "WASD Move | B Block | K Undo | ESC Pause", 18u);
-    tooltipText->setFillColor(sf::Color(230,230,230,200));
+    tooltipText->setFillColor(sf::Color::White);
+    tooltipText->setStyle(sf::Text::Style::Bold);
     tooltipText->setPosition({10.f, (float)WindowHeight - 32.f});
 
     levelTitleText = std::make_unique<sf::Text>(font, "Level 1", 20u);
     levelTitleText->setFillColor(sf::Color::White);
+    levelTitleText->setStyle(sf::Text::Style::Bold);
     levelTitleText->setPosition({(float)WindowWidth - 200.f, 40.f});
 
     toastText = std::make_unique<sf::Text>(font, "", 22u);
     toastText->setFillColor(sf::Color(255, 200, 80));
+    toastText->setStyle(sf::Text::Style::Bold);
     toastText->setPosition({(float)WindowWidth/2.f - 140.f, (float)WindowHeight - 80.f});
 
     // prepare built-in levels

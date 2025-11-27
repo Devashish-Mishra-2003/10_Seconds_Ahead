@@ -19,7 +19,7 @@ ElevatedButton::ElevatedButton(const sf::Font& font, const std::string& label, c
     sf::FloatRect tb = labelText.getLocalBounds();
     sf::Vector2f origin{ tb.position.x + tb.size.x / 2.f, tb.position.y + tb.size.y / 2.f };
     labelText.setOrigin(origin);
-
+    labelText.setStyle(sf::Text::Style::Bold);
     // position label at center of card (local)
     labelText.setPosition(card.getPosition() + sf::Vector2f(size.x / 2.f, size.y / 2.f));
 }
