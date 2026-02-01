@@ -1,2 +1,5 @@
-.dll
-.txt
+*.dll
+*.txt
+*.exe
+*.gitignore
+*.vscode
