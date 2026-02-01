@@ -111,11 +111,11 @@ static const std::vector<std::string> L5 = {
 "....TTT.............",
 "....................",
 "....................",
-"..LvC>.....Lv.T.....",
+"..C>Lv.....Lv.T.....",
 "....................",
-"....I.........I.....",
+"..............I.....",
 "....................",
-"....................",
+"........I...........",
 "....................",
 ".........I..........",
 ".................TTT",
@@ -214,7 +214,7 @@ Game::Game()
     timerText->setStyle(sf::Text::Style::Bold);
     timerText->setPosition({10.f, 10.f});
 
-    blocksLeftText = std::make_unique<sf::Text>(font, "Blocks Left: 3", 20u);
+    blocksLeftText = std::make_unique<sf::Text>(font, "Blocks Left : 3", 20u);
     blocksLeftText->setFillColor(sf::Color::White);
     blocksLeftText->setStyle(sf::Text::Style::Bold);
     blocksLeftText->setPosition({10.f, 40.f});
@@ -1055,5 +1055,3 @@ void Game::updateLetterboxView(unsigned int newWidth, unsigned int newHeight)
     view.setViewport(sf::FloatRect({posX, posY}, {sizeX, sizeY}));
     window.setView(view);
 }
-
-
